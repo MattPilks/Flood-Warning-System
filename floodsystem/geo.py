@@ -50,3 +50,11 @@ def stations_by_distance(stations, p):
         distance = haversine(p, location[1])
         stations_distances.append(distance,location[0])
     sorted_stations = utils.sort_by_key(stations_distances)
+    return sorted_stations
+    
+def rivers_with_station(stations):
+    rivers = set()
+    for station in stations:
+        rivers.append(station.river)
+     return rivers
+        
