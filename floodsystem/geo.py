@@ -12,8 +12,8 @@ from .utils import sorted_by_key  # noqa
 from haversine import haversine
 
 def stations_within_radius(stations,centre,r):
+    """Returns a list of all stations within radius r of a geographic coordinate centre."""
     valid_stations = []
-    
     for station in stations:
        distance = haversine(station.coord, centre)
        if distance <= r:
@@ -22,6 +22,7 @@ def stations_within_radius(stations,centre,r):
     return(sorted_valid_stations)
 
 def rivers_by_station_number(stations, N):
+    """Returns a list of N (river name, number of stations) tuples, sorted by the number of stations. In the case that there are more rivers with the same number of stations as the Nth entry, includes these rivers in the list"""
     river_tuples_list = [("none",0)]
     river_dict = {}
     river_list = []

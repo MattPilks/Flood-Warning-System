@@ -7,6 +7,9 @@ for manipulating/modifying station data
 """
 
 
+from numpy import True_
+
+
 class MonitoringStation:
     """This class represents a river level monitoring station"""
 
@@ -30,6 +33,7 @@ class MonitoringStation:
         self.latest_level = None
 
     def __repr__(self):
+        """Method that returns a string representation of a MonitoringStation object"""
         d = "Station name:     {}\n".format(self.name)
         d += "   id:            {}\n".format(self.station_id)
         d += "   measure id:    {}\n".format(self.measure_id)
@@ -38,3 +42,10 @@ class MonitoringStation:
         d += "   river:         {}\n".format(self.river)
         d += "   typical range: {}".format(self.typical_range)
         return d
+
+    def typical_range_consistent(self):
+        """Method that checks the typical high/low range data of a MonitoringStation object and returns True if the data is consistent and False if the data is inconsistent or unavailable"""
+        if (self.typical_range is not None) and (self.typical_range[1] > self.typical_range[0]):
+            return True
+        else:
+            return False
