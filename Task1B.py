@@ -1,7 +1,7 @@
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import stations_by_distance
 def run():
-  """Requiremtn for task B"""
+  """Requirement for task B"""
   stations = build_station_list()
   station_list = []
   for station in stations:
