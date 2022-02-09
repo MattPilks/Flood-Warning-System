@@ -8,7 +8,7 @@ def run():
     station_name = station.name
     station_coord = station.coord
     station_list.append(station_name, station_coord)
-   sorted = stations_by_distance(station_list,(52.2053, 0.1218))
+    sorted = stations_by_distance(station_list,(52.2053, 0.1218))
   close_ten = sorted[:10]
   farth_ten = sorted[10:]
   print(close_ten)

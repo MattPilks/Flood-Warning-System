@@ -56,7 +56,7 @@ def rivers_with_station(stations):
     rivers = set()
     for station in stations:
         rivers.append(station.river)
-     return rivers
+    return rivers
         
 def stations_by_river(stations):
     rivers = rivers_with_station(stations)
