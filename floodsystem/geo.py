@@ -58,3 +58,14 @@ def rivers_with_station(stations):
         rivers.append(station.river)
      return rivers
         
+def stations_by_river(stations):
+    rivers = rivers_with_station(stations)
+    output = dict()
+    for river in rivers:
+        stations4river = []
+        for station in stations:
+            if station.river == river:
+                stations4river.append(station.name)
+        output[river] = stations4river
+    return(output)
+            
