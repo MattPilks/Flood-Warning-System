@@ -42,3 +42,11 @@ def rivers_by_station_number(stations, N):
         if river_tuples_list[i][1] != river_tuples_list[N-1][1]:
             break      
     return river_tuples_list[0:i]
+
+def stations_by_distance(stations, p):
+    stations_distances = []
+    for i in stations:
+        location = stations[i]
+        distance = haversine(p, location[1])
+        stations_distances.append(distance,location[0])
+    sorted_stations = utils.sort_by_key(stations_distances)
