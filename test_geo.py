@@ -1,6 +1,45 @@
 from floodsystem.geo import rivers_by_station_number
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import stations_within_radius
+from floodsystem.station import MonitoringStation 
+
+
+"""Making Imaginary Stations"""
+def make_stations():
+    s1 = MonitoringStation(
+        station_id=
+        measure_id=
+        label=
+        coord=
+        typical_range=
+        river=
+        town=
+    )
+
+    s2 = MonitoringStation(
+        station_id=
+        measure_id=
+        label=
+        coord=
+        typical_range=
+        river=
+        town=
+    )
+
+    s3 = MonitoringStation(
+        station_id=
+        measure_id=
+        label=
+        coord=
+        typical_range=
+        river=
+        town=
+    )
+
+
+
+
+
 
 def test_river_by_station_number():
     """Testing function that asserts known return values for given N input"""
