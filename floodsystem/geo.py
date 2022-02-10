@@ -56,7 +56,7 @@ def stations_by_distance(stations, p):
 def rivers_with_station(stations):
     rivers = set()
     for station in stations:
-        rivers.append(station.river)
+        rivers.add(station.river)
     return rivers
         
 def stations_by_river(stations):
