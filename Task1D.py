@@ -7,13 +7,13 @@ def run():
   rivers = sorted(rivers)
   print(rivers[:10])
   stations_river = stations_by_river(stations)
-  Aire = stations_river["Aire"]
+  Aire = stations_river["River Aire"]
   print(Aire)
-  Cam = stations_river["Cam"]
+  Cam = stations_river["River Cam"]
   print(Cam)
-  Thames = stations_river["Thames"]
+  Thames = stations_river["River Thames"]
   print(Thames)
   
   
 if __name__ == "__main__":
-    run()
+  run()

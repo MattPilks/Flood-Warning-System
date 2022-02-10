@@ -21,8 +21,6 @@ def stations_within_radius(stations,centre,r):
         sorted_valid_stations = sorted(valid_stations)
     return(sorted_valid_stations)
 
-<<<<<<< HEAD
-=======
 def rivers_by_station_number(stations, N):
     """Returns a list of N (river name, number of stations) tuples, sorted by the number of stations. In the case that there are more rivers with the same number of stations as the Nth entry, includes these rivers in the list"""
     river_tuples_list = [("none",0)]
@@ -46,16 +44,13 @@ def rivers_by_station_number(stations, N):
             break      
     return river_tuples_list[0:i]
 
->>>>>>> 8124eafd1f42fd6c798cf5286110f2a43dc4a5b3
 def stations_by_distance(stations, p):
     stations_distances = []
     for i in stations:
-        location = stations[i]
-        distance = haversine(p, location[1])
-        stations_distances.append(distance,location[0])
-    sorted_stations = utils.sort_by_key(stations_distances)
-<<<<<<< HEAD
-=======
+        distance = haversine(p, i[1])
+        station_distance = [distance,i[0]]
+        stations_distances.append(station_distance)
+    sorted_stations = sorted_by_key(stations_distances, 0)
     return sorted_stations
     
 def rivers_with_station(stations):
@@ -75,4 +70,3 @@ def stations_by_river(stations):
         output[river] = stations4river
     return(output)
             
->>>>>>> 8124eafd1f42fd6c798cf5286110f2a43dc4a5b3
