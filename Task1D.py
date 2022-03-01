@@ -1,7 +1,7 @@
 from floodsystem.stationdata import build_station_list
 from floodsystem.geo import *
 def run():
-  """Requirement for task D"""
+  """Requirement for task D, gives stations on a given river"""
   stations = build_station_list()
   rivers = rivers_with_station(stations)
   rivers = sorted(rivers)

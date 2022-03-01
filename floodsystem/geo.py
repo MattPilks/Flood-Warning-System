@@ -13,6 +13,7 @@ from haversine import haversine
 def stations_within_radius(stations,centre,r):
     """Returns a list of all stations within radius r of a geographic coordinate centre."""
     valid_stations = []
+    sorted_valid_stations = []
     for station in stations:
        distance = haversine(station.coord, centre)
        if distance <= r:
@@ -47,8 +48,9 @@ def stations_by_distance(stations, p):
     """receives a list of station objects and a set of coordinates and returns a list of those stations in order of distance from those coordinates"""
     stations_distances = []
     for i in stations:
-        distance = haversine(p, i[1])
-        station_distance = [distance,i[0]]
+        
+        distance = haversine(p, i.coord)
+        station_distance = [distance,i]
         stations_distances.append(station_distance)
     sorted_stations = sorted_by_key(stations_distances, 0)
     return sorted_stations

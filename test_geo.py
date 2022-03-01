@@ -56,7 +56,7 @@ def test_stations_within_radius():
     """Testing Function that asserts known stations within a given radius"""
     print("Testing stations_within_radius Method:")
     stations = make_stations()
-    stations_allowed = stations_within_radius(stations,(52.212064, -1.671348),3)
+    stations_allowed = stations_within_radius(stations,(52.212064, -1.671348),10)
     assert len(stations_allowed) == 1 #Correct value = 1 for station in stratford upon avon
     print(" Test Passed")
 
@@ -72,7 +72,7 @@ def test_typical_range_consistent():
 def test_stations_by_distance():
     stations = make_stations()
     stations_distances = stations_by_distance(stations, (52.475844,-1.889093))
-    assert(stations_distances[0].name) == "avon station"
+    assert(stations_distances[0][1].name) == "avon station"
 
 
 
