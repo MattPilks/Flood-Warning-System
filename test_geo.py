@@ -70,9 +70,12 @@ def test_typical_range_consistent():
 
 
 def test_stations_by_distance():
+    """Testing Function that asserts a known closest station"""
+    print("Tesiting test_stations_by_distance Method")
     stations = make_stations()
     stations_distances = stations_by_distance(stations, (52.475844,-1.889093))
     assert(stations_distances[0][1].name) == "avon station"
+    print(" Test Passed")
 
 
 
