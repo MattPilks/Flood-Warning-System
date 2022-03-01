@@ -51,9 +51,9 @@ class MonitoringStation:
 
  
 def inconsistent_typical_range_stations(stations):
-    """function to filter out all consistent stations from a list of station objects"""
-    inconsistents = []
+    # print("inconsistent_typical_range_stations()")
+    inconsistent_list = []
     for station in stations:
         if station.typical_range_consistent() == False:
-            inconsistents.append(station)
-    return(inconsistents)
+            inconsistent_list.append(station)
+    return inconsistent_list 
