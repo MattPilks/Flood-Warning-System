@@ -1,9 +1,10 @@
+from floodsystem.analysis import floodwarning
 from floodsystem.datafetcher import fetch_measure_levels
 from floodsystem.stationdata import build_station_list
 from datetime import datetime, timedelta
-from floodsystem.plot import plot_water_level_with_fit
+from floodsystem.analysis import floodwarning
 
-"""Requirements for Task2F"""
+"""Requirements for Task2G"""
 
 
 
@@ -31,11 +32,10 @@ def run():
             if station.name == topstation:
                 if DEBUG: print("fetching measure level for current station:", station.name, station.measure_id)
                 date_list , level_list = fetch_measure_levels(station.measure_id, timedelta(days=2))
-                plot_water_level_with_fit(station,date_list,level_list,25)
+                print("Flood risk for",station.name,"is",floodwarning(station,date_list,level_list,15))
 
 if __name__ == "__main__":
     DEBUG = False
     FULL_LIST = False
-    print("*** Task 2F: CUED Part IA Flood Warning System ***")
+    print("*** Task 2G: CUED Part IA Flood Warning System ***")
     run()
-    
