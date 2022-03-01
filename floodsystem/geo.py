@@ -10,7 +10,6 @@ from floodsystem.stationdata import build_station_list
 from .utils import sorted_by_key  # noqa
 
 from haversine import haversine
-
 def stations_within_radius(stations,centre,r):
     """Returns a list of all stations within radius r of a geographic coordinate centre."""
     valid_stations = []
@@ -45,6 +44,7 @@ def rivers_by_station_number(stations, N):
     return river_tuples_list[0:i]
 
 def stations_by_distance(stations, p):
+    """receives a list of station objects and a set of coordinates and returns a list of those stations in order of distance from those coordinates"""
     stations_distances = []
     for i in stations:
         distance = haversine(p, i[1])
@@ -54,12 +54,14 @@ def stations_by_distance(stations, p):
     return sorted_stations
     
 def rivers_with_station(stations):
+    """receives list of station obhjects and returns a list of names of rivers that have at least one station on"""
     rivers = set()
     for station in stations:
         rivers.add(station.river)
     return rivers
         
 def stations_by_river(stations):
+    """Receives list of station of objects and returns a dictionary that maps each river to a list of stations on said river"""
     rivers = rivers_with_station(stations)
     output = dict()
     for river in rivers:
@@ -69,4 +71,5 @@ def stations_by_river(stations):
                 stations4river.append(station.name)
         output[river] = stations4river
     return(output)
+
             
