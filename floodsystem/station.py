@@ -71,3 +71,4 @@ def inconsistent_typical_range_stations(stations):
         if station.typical_range_consistent() == False:
             inconsistent_list.append(station)
     return inconsistent_list 
+
