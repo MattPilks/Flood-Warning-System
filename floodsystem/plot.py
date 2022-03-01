@@ -1,7 +1,7 @@
 """This module provides a visual representation of water levels"""
 
 import matplotlib.pyplot as plt
-from datetime import datetime, timedelta
+
 
 
 def plot_water_levels(station, dates, levels):
@@ -13,7 +13,7 @@ def plot_water_levels(station, dates, levels):
     plt.xlabel('date')
     plt.ylabel('water level (m)')
     plt.xticks(rotation=45);
-    plt.title(station)
+    plt.title(station.name)
 
 
     plt.tight_layout()
