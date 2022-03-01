@@ -7,32 +7,32 @@ from floodsystem.station import MonitoringStation
 """Making Imaginary Stations"""
 def make_stations():
     s1 = MonitoringStation(
-        station_id=1
-        measure_id=1
-        label="nene station"
-        coord=(52.512825, -0.456695)
-        typical_range=(2,50)
-        river="Nene"
+        station_id=1,
+        measure_id=1,
+        label="nene station",
+        coord=(52.512825, -0.456695),
+        typical_range=(2,50),
+        river="Nene",
         town="Northampton"
     )
 
     s2 = MonitoringStation(
-        station_id=2
-        measure_id=2
-        label= "ouse station"
-        coord=(53.833697, -1.093396)
-        typical_range=(25,2)
-        river="Ouse"
+        station_id=2,
+        measure_id=2,
+        label= "ouse station",
+        coord=(53.833697, -1.093396),
+        typical_range=(25,2),
+        river="Ouse",
         town="York"
     )
 
     s3 = MonitoringStation(
-        station_id=3
-        measure_id=3
-        label="avon station"
-        coord=(52.191044, -1.701045)
-        typical_range= None
-        river="Avon"
+        station_id=3,
+        measure_id=3,
+        label="avon station",
+        coord=(52.191044, -1.701045),
+        typical_range= None,
+        river="Avon",
         town="Stratford"
     )
     return(s1, s2, s3)
