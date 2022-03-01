@@ -6,7 +6,6 @@ for manipulating/modifying station data
 
 """
 
-
 from numpy import True_
 
 
@@ -50,6 +49,7 @@ class MonitoringStation:
         else:
             return False
 
+ 
 def inconsistent_typical_range_stations(stations):
     # print("inconsistent_typical_range_stations()")
     inconsistent_list = []
