@@ -18,7 +18,7 @@ def stations_within_radius(stations,centre,r):
        if distance <= r:
         valid_stations.append(station.name)
         sorted_valid_stations = sorted(valid_stations)
-    return(sorted_valid_stations)
+    return sorted_valid_stations
 
 def rivers_by_station_number(stations, N):
     """Returns a list of N (river name, number of stations) tuples, sorted by the number of stations. In the case that there are more rivers with the same number of stations as the Nth entry, includes these rivers in the list"""
