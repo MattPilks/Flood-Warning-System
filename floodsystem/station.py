@@ -6,7 +6,6 @@ for manipulating/modifying station data
 
 """
 
-
 from numpy import True_
 
 
@@ -50,8 +49,11 @@ class MonitoringStation:
         else:
             return False
 
+ 
 def inconsistent_typical_range_stations(stations):
+    """function to filter out all consistent stations from a list of station objects"""
     inconsistents = []
     for station in stations:
-        if station.typical_range_consistent == False:
+        if station.typical_range_consistent() == False:
             inconsistents.append(station)
+    return(inconsistents)
