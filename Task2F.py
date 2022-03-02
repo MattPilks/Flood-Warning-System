@@ -35,7 +35,7 @@ def run():
 
 if __name__ == "__main__":
     DEBUG = False
-    FULL_LIST = False
+    FULL_LIST = True
     print("*** Task 2F: CUED Part IA Flood Warning System ***")
     run()
     
