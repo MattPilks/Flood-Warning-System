@@ -12,5 +12,11 @@ def stations_level_over_threshold(stations,tol):
     return stations_over
 
 
-#def stations_highest_rel_level(stations, N):
-
+def stations_highest_rel_level(stations, N):
+    danger_sorted_list = stations_level_over_threshold(stations,-0.5)
+    i = 0
+    most_at_risk = []
+    while i < N:
+        most_at_risk.append((danger_sorted_list[i][0], danger_sorted_list[i][1]))
+        i = i +1
+    return most_at_risk
